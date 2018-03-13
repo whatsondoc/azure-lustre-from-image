@@ -335,7 +335,7 @@
     "subnetClientsID": "[concat(variables('vnetID'), '/subnets/', parameters('subnetClientsName'))]",
     "mgsDiskCount": 2,
     "mdsDiskCount": 1,
-    "diagnosticsStorageAccount": "[concat('d',uniqueString(resourceGroup().id,'d'),parameters('vmNamePrefix'))]"
+    "diagnosticsStorageAccount": "[toLower (concat (uniqueString(resourceGroup().id), parameters('vmNamePrefix')))]"
   },
   "resources": [
     {
@@ -468,7 +468,7 @@
             "value": "Dynamic"
           },
           "publicIPAddressDomainNameLabel": {
-            "value": "[toLower (concat (parameters('publicIPAddressDomainNameLabel'), uniqueString(resourceGroup().id)))]"
+            "value": "[parameters('publicIPAddressDomainNameLabel')]"
           },
           "publicIPAddressResourceGroup": {
             "value": "[parameters('publicIPAddressResourceGroup')]"
