@@ -27,6 +27,7 @@
     },
     "imageResourceGroup": {
       "type": "string",
+      "defaultValue": "[resourceGroup().Name]",
       "metadata": {
         "description": "Resource group of the existing managed disk image"
       }
@@ -120,6 +121,7 @@
     },
     "publicIPAddressResourceGroup": {
       "type": "string",
+      "defaultValue":  "[resourceGroup().Name]",
       "metadata": {
         "description": "Public IP resource group for cases when existing public IP is used"
       }
@@ -182,20 +184,21 @@
     },
     "filesystemName": {
       "type": "string",
-      "defaultValue": "scratch",
+      "defaultValue": "lustre",
       "metadata": {
         "description": "Name of the Lustre filesytem (e.g. scratch, lustre, shared_data) that will be mounted from clients as mgsip@tcp0:/filesystemname"
       }
     },
     "vnetResourceGroup": {
       "type": "string",
+      "defaultValue": "bhw-lustre-01",
       "metadata": {
         "description": "Virtual Network Resource Group for cases when Lustre nodes are deployed into an existing VNet"
       }
     },
     "vnetName": {
       "type": "string",
-      "defaultValue": "vnet-lustre",
+      "defaultValue": "bhw-vnet-lustre",
       "metadata": {
         "description": "Virtual Network name"
       }
@@ -465,7 +468,7 @@
             "value": "Dynamic"
           },
           "publicIPAddressDomainNameLabel": {
-            "value": "[parameters('publicIPAddressDomainNameLabel')]"
+            "value": "[toLower (concat (parameters('publicIPAddressDomainNameLabel'), uniqueString(resourceGroup().id)))]"
           },
           "publicIPAddressResourceGroup": {
             "value": "[parameters('publicIPAddressResourceGroup')]"
