@@ -9,31 +9,31 @@
       "value": "eastus"
     },
     "imageName": {
-      "value": "lustre-os-201508.vhd"
+      "value": "<<_image_name_>>"
     },
     "imageOSDiskBlobUri": {
-      "value": "https://bhwlustreimage.blob.core.windows.net/vhdimage/lustre-os-201508.vhd"
+      "value": "<<_image_URI_>>"
     },
     "vmNamePrefix": {
       "value": "lustre"
     },
     "publicIPAddressDomainNameLabel": {
-      "value": "lustretest01"
+      "value": "<<_pip_dns_label_>>"
     },
     "publicIPAddressNewOrExisting": {
       "value": "new"
     },
     "adminUsername": {
-      "value": "benji"
+      "value": "<<_admin_username_>>"
     },
     "adminPassword": {
-      "value": "P4ssw0rdP4ssw0rd"
+      "value": "<<_admin_password_>>"
     },
     "authenticationType": {
       "value": "sshPublicKey"
     },
     "sshPublicKey": {
-      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiR42o/HJvSnJk5guUnM+kUigjJ5bt7CA9DHCEh/n5N3TzySccKXJJAEe1S02bjTmVVFqHAZzubSLLAwgR4Cs8yJuQiuPIk96YHIB3Br4WEcbA9AwDjTLdy+UQs6N5hRLFCPb2/HnSmhz7RMfEBscTaT+MvQDrgwmhlWnRpCW3ZWLqOPGnAhRoQkYhC9DJIJmPEf9TQn1bsmsBnWPt5kB2wPpJmrLJFHrXl1KbU6S47xGDwkg7X2jAV6hySukqKj//F08DXCagKy49QnE8Zruj9q/yrUyYaM5ZBa+ZhPCbd1oxEWq8iTLSHFEcjeCUsDOU01EYuQKQO+8HnDmybTKd"
+      "value": "<<_ssh_public_key_>>"
     },
     "mgsVmSize": {
       "value": "Standard_DS3_v2"
